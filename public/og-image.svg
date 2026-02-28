@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="50%" style="stop-color:#1e1b4b"/>
+      <stop offset="100%" style="stop-color:#0f172a"/>
+    </linearGradient>
+    <linearGradient id="text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6c47ff"/>
+      <stop offset="100%" style="stop-color:#06b6d4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Glow circles -->
+  <circle cx="100" cy="100" r="200" fill="#6c47ff" opacity="0.1"/>
+  <circle cx="1100" cy="530" r="200" fill="#06b6d4" opacity="0.1"/>
+
+  <!-- Logo pill -->
+  <rect x="440" y="180" width="320" height="60" rx="30" fill="url(#text-grad)"/>
+  <text x="600" y="222" font-size="28" text-anchor="middle" fill="white" font-family="Arial" font-weight="800">⚡ Calcovix</text>
+
+  <!-- Main headline -->
+  <text x="600" y="320" font-size="56" text-anchor="middle" fill="white" font-family="Arial" font-weight="800">Calculate Anything,</text>
+  <text x="600" y="390" font-size="56" text-anchor="middle" fill="#6c47ff" font-family="Arial" font-weight="800">Instantly</text>
+
+  <!-- Subtitle -->
+  <text x="600" y="450" font-size="24" text-anchor="middle" fill="#94a3b8" font-family="Arial">200+ Free Calculators for Finance, Health, Education & More</text>
+
+  <!-- Stats -->
+  <rect x="250" y="490" width="180" height="60" rx="12" fill="white" opacity="0.1"/>
+  <text x="340" y="528" font-size="20" text-anchor="middle" fill="white" font-family="Arial" font-weight="800">200+ Tools</text>
+
+  <rect x="510" y="490" width="180" height="60" rx="12" fill="white" opacity="0.1"/>
+  <text x="600" y="528" font-size="20" text-anchor="middle" fill="white" font-family="Arial" font-weight="800">100% Free</text>
+
+  <rect x="770" y="490" width="180" height="60" rx="12" fill="white" opacity="0.1"/>
+  <text x="860" y="528" font-size="20" text-anchor="middle" fill="white" font-family="Arial" font-weight="800">No Signup</text>
+</svg>
