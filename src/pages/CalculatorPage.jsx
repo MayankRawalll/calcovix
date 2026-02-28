@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import { calculators } from '../data/calculators'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
@@ -46,6 +47,17 @@ function CalculatorPage() {
 
   return (
     <div className="min-h-screen bg-[#f8fafc] flex flex-col">
+
+      {/* SEO Meta Tags */}
+      <Helmet>
+        <title>{calc.name} — Free Online Calculator | Calcovix</title>
+        <meta name="description" content={`${calc.description}. Free ${calc.name} online — instant results, no signup needed.`} />
+        <meta property="og:title" content={`${calc.name} | Calcovix`} />
+        <meta property="og:description" content={calc.description} />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href={`https://calcovix.in/calculator/${calc.slug}`} />
+      </Helmet>
+
       <Navbar />
 
       {/* Breadcrumb */}
