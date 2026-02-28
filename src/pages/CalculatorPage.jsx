@@ -1,12 +1,14 @@
 import { useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import { useTranslation } from 'react-i18next'
 import { calculators } from '../data/calculators'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
 function CalculatorPage() {
   const { slug } = useParams()
+  const { t } = useTranslation()
   const calc = calculators[slug]
   const [inputs, setInputs] = useState({})
   const [results, setResults] = useState(null)
@@ -62,7 +64,7 @@ function CalculatorPage() {
 
       {/* Breadcrumb */}
       <div className="px-7 py-3 bg-white border-b border-[#f1f5f9] text-xs text-[#94a3b8]">
-        <Link to="/" className="hover:text-[#6c47ff]">Home</Link>
+        <Link to="/" className="hover:text-[#6c47ff]">{t('calc_home')}</Link>
         <span className="mx-2">›</span>
         <span className="text-[#6c47ff] font-semibold">{calc.name}</span>
       </div>
@@ -105,7 +107,7 @@ function CalculatorPage() {
             {/* Error */}
             {error && (
               <div className="mt-4 bg-[#fef2f2] border border-[#fecaca] rounded-xl px-4 py-3 text-xs text-[#b91c1c] font-semibold">
-                ⚠️ Please fill in all fields with valid numbers.
+                {t('calc_error')}
               </div>
             )}
 
@@ -115,13 +117,13 @@ function CalculatorPage() {
                 onClick={handleCalculate}
                 className="flex-1 bg-[#6c47ff] hover:bg-[#5b3de8] text-white font-extrabold py-3 rounded-xl text-sm transition-colors"
               >
-                ⚡ Calculate →
+                {t('calc_calculate')}
               </button>
               <button
                 onClick={handleReset}
                 className="bg-[#f1f5f9] hover:bg-[#e2e8f0] text-[#64748b] font-bold py-3 px-5 rounded-xl text-sm transition-colors"
               >
-                Reset
+                {t('calc_reset')}
               </button>
             </div>
           </div>
@@ -130,7 +132,9 @@ function CalculatorPage() {
           {results && (
             <div className="px-6 pb-6">
               <div className="bg-gradient-to-br from-[#f5f3ff] to-[#ede9fe] border-2 border-[#ddd6fe] rounded-2xl p-5">
-                <div className="text-xs font-extrabold text-[#6c47ff] uppercase tracking-wider mb-4">📊 Your Results</div>
+                <div className="text-xs font-extrabold text-[#6c47ff] uppercase tracking-wider mb-4">
+                  {t('calc_results')}
+                </div>
                 <div className="grid grid-cols-3 gap-3">
                   {results.map(({ label, value }) => (
                     <div key={label} className="bg-white rounded-xl p-3 text-center border border-[#ddd6fe]">
