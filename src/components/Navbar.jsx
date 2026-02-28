@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 function Navbar() {
@@ -26,10 +27,10 @@ function Navbar() {
       {/* Main navbar row */}
       <div className="h-[58px] flex items-center justify-between px-5 md:px-7">
 
-        {/* Logo */}
-        <div className="bg-gradient-to-r from-[#6c47ff] to-[#06b6d4] text-white font-extrabold text-sm px-4 py-2 rounded-lg">
+        {/* Logo — clicks to home */}
+        <Link to="/" className="bg-gradient-to-r from-[#6c47ff] to-[#06b6d4] text-white font-extrabold text-sm px-4 py-2 rounded-lg">
           ⚡ Calcovix
-        </div>
+        </Link>
 
         {/* Desktop nav pills */}
         <div className="hidden md:flex gap-2">
