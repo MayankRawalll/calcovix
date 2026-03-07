@@ -4,6 +4,16 @@ import Footer from '../../components/Footer'
 
 function Contact() {
   const [submitted, setSubmitted] = useState(false)
+  const [formData, setFormData] = useState({ name: '', email: '', subject: 'Suggest a new calculator', message: '' })
+
+  const handleSubmit = async () => {
+    const res = await fetch('https://formspree.io/f/xaqpyrad', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)
+    })
+    if (res.ok) setSubmitted(true)
+  }
 
   return (
     <div>
@@ -26,22 +36,24 @@ function Contact() {
                 <input
                   type="text"
                   placeholder="e.g. Rahul Sharma"
+                  onChange={e => setFormData({...formData, name: e.target.value})}
                   className="w-full border border-[#e2e8f0] rounded-xl px-4 py-3 text-sm outline-none focus:border-[#6c47ff] transition-colors"
                 />
               </div>
-
               <div>
                 <label className="block text-sm font-bold text-[#0f172a] mb-2">Email Address</label>
                 <input
                   type="email"
                   placeholder="e.g. rahul@gmail.com"
+                  onChange={e => setFormData({...formData, email: e.target.value})}
                   className="w-full border border-[#e2e8f0] rounded-xl px-4 py-3 text-sm outline-none focus:border-[#6c47ff] transition-colors"
                 />
               </div>
-
               <div>
                 <label className="block text-sm font-bold text-[#0f172a] mb-2">Subject</label>
-                <select className="w-full border border-[#e2e8f0] rounded-xl px-4 py-3 text-sm outline-none focus:border-[#6c47ff] transition-colors text-[#334155]">
+                <select
+                  onChange={e => setFormData({...formData, subject: e.target.value})}
+                  className="w-full border border-[#e2e8f0] rounded-xl px-4 py-3 text-sm outline-none focus:border-[#6c47ff] transition-colors text-[#334155]">
                   <option>Suggest a new calculator</option>
                   <option>Report a bug</option>
                   <option>General feedback</option>
@@ -49,18 +61,17 @@ function Contact() {
                   <option>Other</option>
                 </select>
               </div>
-
               <div>
                 <label className="block text-sm font-bold text-[#0f172a] mb-2">Message</label>
                 <textarea
                   rows={5}
                   placeholder="Write your message here..."
+                  onChange={e => setFormData({...formData, message: e.target.value})}
                   className="w-full border border-[#e2e8f0] rounded-xl px-4 py-3 text-sm outline-none focus:border-[#6c47ff] transition-colors resize-none"
                 />
               </div>
-
               <button
-                onClick={() => setSubmitted(true)}
+                onClick={handleSubmit}
                 className="w-full bg-[#6c47ff] text-white font-bold py-3 rounded-xl hover:bg-[#5a38e0] transition-colors"
               >
                 Send Message 🚀
@@ -71,7 +82,7 @@ function Contact() {
 
         <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
           {[
-            { emoji: '📧', title: 'Email', value: 'hello@calcovix.in' },
+            { emoji: '📧', title: 'Email', value: 'mayankrawal545@gmail.com' },
             { emoji: '🌐', title: 'Website', value: 'calcovix.in' },
             { emoji: '📍', title: 'Based in', value: 'India 🇮🇳' },
           ].map(item => (
