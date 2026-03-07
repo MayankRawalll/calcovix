@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://calcovix.in</loc>
+    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- Category Pages -->
+  <url><loc>https://calcovix.in/category/finance</loc><priority>0.9</priority></url>
+  <url><loc>https://calcovix.in/category/health</loc><priority>0.9</priority></url>
+  <url><loc>https://calcovix.in/category/education</loc><priority>0.9</priority></url>
+  <url><loc>https://calcovix.in/category/astrology</loc><priority>0.9</priority></url>
+  <url><loc>https://calcovix.in/category/legal</loc><priority>0.9</priority></url>
+  <url><loc>https://calcovix.in/category/general</loc><priority>0.9</priority></url>
+  <url><loc>https://calcovix.in/category/fun</loc><priority>0.9</priority></url>
+
+  <!-- Legal Pages -->
+  <url><loc>https://calcovix.in/privacy-policy</loc><priority>0.5</priority></url>
+  <url><loc>https://calcovix.in/terms</loc><priority>0.5</priority></url>
+  <url><loc>https://calcovix.in/disclaimer</loc><priority>0.5</priority></url>
+  <url><loc>https://calcovix.in/about</loc><priority>0.5</priority></url>
+  <url><loc>https://calcovix.in/contact</loc><priority>0.5</priority></url>
+
+  <!-- Finance Calculators -->
+  <url><loc>https://calcovix.in/calculator/emi</loc><priority>0.8</priority></url>
+  <url><loc>https://calcovix.in/calculator/gst</loc><priority>0.8</priority></url>
+  <url><loc>https://calcovix.in/calculator/sip</loc><priority>0.8</priority></url>
+  <url><loc>https://calcovix.in/calculator/incometax</loc><priority>0.8</priority></url>
+  <url><loc>https://calcovix.in/calculator/homeloan</loc><priority>0.8</priority></url>
+  <url><loc>https://calcovix.in/calculator/fd</loc><priority>0.8</priority></url>
+  <url><loc>https://calcovix.in/calculator/ppf</loc><priority>0.8</priority></url>
+  <url><loc>https://calcovix.in/calculator/hra</loc><priority>0.8</priority></url>
+  <url><loc>https://calcovix.in/calculator/nps</loc><priority>0.8</priority></url>
+  <url><loc>https://calcovix.in/calculator/cagr</loc><priority>0.8</priority></url>
+
+  <!-- Health Calculators -->
+  <url><loc>https://calcovix.in/calculator/bmi</loc><priority>0.8</priority></url>
+  <url><loc>https://calcovix.in/calculator/bmr</loc><priority>0.8</priority></url>
+  <url><loc>https://calcovix.in/calculator/calorie</loc><priority>0.8</priority></url>
+  <url><loc>https://calcovix.in/calculator/idealweight</loc><priority>0.8</priority></url>
+  <url><loc>https://calcovix.in/calculator/pregnancy</loc><priority>0.8</priority></url>
+
+  <!-- Education Calculators -->
+  <url><loc>https://calcovix.in/calculator/cgpa</loc><priority>0.8</priority></url>
+  <url><loc>https://calcovix.in/calculator/percentage</loc><priority>0.8</priority></url>
+  <url><loc>https://calcovix.in/calculator/gpa</loc><priority>0.8</priority></url>
+  <url><loc>https://calcovix.in/calculator/attendance</loc><priority>0.8</priority></url>
+
+  <!-- General Calculators -->
+  <url><loc>https://calcovix.in/calculator/age</loc><priority>0.8</priority></url>
+  <url><loc>https://calcovix.in/calculator/tip</loc><priority>0.8</priority></url>
+  <url><loc>https://calcovix.in/calculator/discount</loc><priority>0.8</priority></url>
+  <url><loc>https://calcovix.in/calculator/fuelcost</loc><priority>0.8</priority></url>
+
+</urlset>
